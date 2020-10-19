@@ -1,0 +1,126 @@
+main {
+    overflow-y: auto;
+}
+
+main.list {
+    width: 100%;
+    padding: 70px 30px;
+
+    color: #000;
+
+    position: relative;
+}
+
+main.list .list-wrapper {
+    padding: 0 20%;
+
+    color: #000;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    text-align: center;
+}
+
+main.list .list-wrapper .locked {
+    height: 70vh;
+}
+
+main.list .list-wrapper input.h1 {
+    border: none;
+    background: rgba(0, 0, 0, 0);
+    text-align: center;
+    font-size: 32px;
+    border-bottom: 1px solid #000;
+    border-radius: 1px;
+}
+
+main.list .list-wrapper input.h3 {
+    border: none;
+    background: rgba(0, 0, 0, 0);
+    text-align: center;
+    font-size: 24px;
+    border-bottom: 1px solid #000;
+    border-radius: 1px;
+}
+
+main.list .list-wrapper .input-title-description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main.list .list-wrapper h1,
+main.list .list-wrapper h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main.list .list-wrapper .icon-edit-confirm {
+    margin-left: 15px;
+}
+
+.create-todo {
+    position: fixed;
+
+    right: 40px;
+    bottom: 40px;
+
+    min-width: 64px;
+    height: 64px;
+    background: #15c3d6;
+    border-radius: 20px;
+    padding: 0 20px;
+    text-decoration: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: background-color 0.2s;
+
+    z-index: 10;
+}
+
+.create-todo:hover {
+    background: #17d6eb;
+}
+
+.create-todo span {
+    color: #fff;
+    margin-right: 10px;
+}
+
+.delete-list {
+    position: fixed;
+    cursor: pointer;
+
+    left: calc(440px + 40px);
+    bottom: 40px;
+
+    min-width: 64px;
+    height: 64px;
+    background: #ff3881;
+    border-radius: 20px;
+    border: none;
+    padding: 0 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: background-color 0.2s;
+
+    z-index: 10;
+}
+
+.delete-list:hover {
+    background: #ff639c;
+}
+
+.delete-list span {
+    color: #fff;
+    margin-left: 10px;
+}

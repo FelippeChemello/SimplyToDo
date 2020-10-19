@@ -1,0 +1,17 @@
+@baseUrl = http://localhost:3333
+
+# @name GetOneList
+GET {{baseUrl}}/todos/1 HTTP/1.1
+
+###
+
+# @name CreateList
+POST {{baseUrl}}/todos HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Minha Primeira Nota",
+    "path": "Minha Nota",
+    "password": "123456",
+    "description": "Sobre a minha nota"
+}

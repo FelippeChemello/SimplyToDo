@@ -1,0 +1,24 @@
+aside.sidebar {
+    min-width: 440px;
+    max-width: 440px;
+    background: linear-gradient(329.54deg, #29b6d1 0%, #00c7c7 100%);
+    padding: 80px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 100vh;
+}
+
+aside.sidebar h2 {
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 42px;
+    margin-top: 64px;
+}
+
+aside.sidebar p {
+    line-height: 28px;
+    margin-top: 24px;
+}
