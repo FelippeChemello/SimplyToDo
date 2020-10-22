@@ -1,9 +1,11 @@
+const path = require('path')
+
 module.exports = {
     type: 'sqlite',
     database: './src/database/database.sqlite',
-    migrations: ['./src/database/migrations/*.ts'],
-    entities: ['./src/models/*.ts'],
+    migrations: [path.join(__dirname, 'src', 'database', 'migrations', '*.ts')],
+    entities: [path.join(__dirname, 'src', 'models', '*.ts')],
     cli: {
-        migrationsDir: './src/database/migrations',
+        migrationsDir: path.join(__dirname, 'src', 'database', 'migrations'),
     },
 }
