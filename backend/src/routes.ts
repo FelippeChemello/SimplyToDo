@@ -1,5 +1,7 @@
 import { Router } from 'express'
 
+import './database/connection'
+
 import ListController from './controllers/ListController'
 import TodoController from './controllers/TodoController'
 

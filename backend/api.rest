@@ -15,3 +15,16 @@ Content-Type: application/json
     "password": "123456",
     "description": "Sobre a minha nota"
 }
+
+###
+
+# @name CreateList
+POST http://localhost:3333/simply-todo/todos HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Minha Primeira Nota",
+    "path": "Minha Nota",
+    "password": "123456",
+    "description": "Sobre a minha nota"
+}
