@@ -25,6 +25,7 @@ export default function Landing() {
                         break
                     case 403:
                         history.push(`/list/${listName}`)
+                        break
                     default:
                         alert('Ocorreu um erro desconhecido, por favor tente novamente mais tarde')
                         break
