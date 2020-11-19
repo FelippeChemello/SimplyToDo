@@ -8,4 +8,5 @@ module.exports = {
     cli: {
         migrationsDir: path.join(__dirname, 'src', 'database', 'migrations'),
     },
+    logging: true,
 }
