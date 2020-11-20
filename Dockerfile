@@ -12,7 +12,3 @@ COPY ${PATH_TO_PROJECT_DIR}/* /app/
 
 # Instalando dependencias da aplicação
 RUN yarn
-
-# Compilando Typescript
-RUN rm -rf build
-RUN yarn build
