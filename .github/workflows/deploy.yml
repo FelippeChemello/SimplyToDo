@@ -27,4 +27,5 @@ jobs:
             git checkout Docker;
             git pull;
             cd SimplyToDo;
+            docker-compose down;
             docker-compose up -d;
