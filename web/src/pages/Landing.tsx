@@ -52,7 +52,7 @@ export default function Landing() {
 
                 <main>
                     <h1> Organize sua lista de tarefas </h1>
-                    <p> Crie sua lista de tarefas de maneira fácil sem cadastro e utilize em qualquer device.</p>
+                    <p> Crie sua lista de tarefas de maneira fácil sem cadastro e utilize em qualquer dispositivo.</p>
                 </main>
 
                 <form className='access-list'>
