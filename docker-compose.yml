@@ -1,0 +1,23 @@
+version: '3.7'
+services:
+    nginx:
+        image: nginx:latest
+        container_name: nginx
+        restart: always
+        ports:
+            - '80:80'
+        volumes:
+            - ./www:/www
+    web:
+        build:
+            context: .
+            dockerfile: Dockerfile
+            args:
+                - PATH_TO_PROJECT_DIR=web
+        volumes:
+            - './web:/app'
+        ports:
+            - '3001:3000'
+        environment:
+            - NODE_ENV=production
+        command: yarn serve -s build
