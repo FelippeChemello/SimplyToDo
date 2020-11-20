@@ -18,7 +18,12 @@ jobs:
           password: ${{ secrets.SSH_PASSWORD }}
           port: 22
           script: |
-            git clone https://github.com/FelippeChemello/SimplyToDo.git;
+            if [ ! -d SimplyToDo/.git]
+            then 
+              git clone https://github.com/FelippeChemello/SimplyToDo.git;
+            else
+              cd SimplyToDo/
+            fi
             git checkout Docker;
             git pull;
             cd SimplyToDo;
