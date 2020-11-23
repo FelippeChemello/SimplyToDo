@@ -8,7 +8,7 @@ services:
             - ./web:/app
         ports:
             - '80:5000'
-        command: /bin/bash -c "yarn && yarn build && yarn serve -s build"
+        command: /bin/bash -c "yarn && REACT_APP_BASE_URL=http://simplytodo.vps-kinghost.net:3333 yarn build && yarn serve -s build"
     backend:
         image: 'node'
         container_name: simplytodo-backend
@@ -19,4 +19,4 @@ services:
             - '3333:3000'
         environment:
             - PORT=3000
-        command: /bin/bash -c "yarn && yarn build && yarn typeorm migration:run && node dist/server.js"
+        command: /bin/bash -c "yarn && yarn build && yarn typeorm migration:run && NODE_ENV=production node dist/server.js"

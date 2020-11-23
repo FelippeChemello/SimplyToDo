@@ -1,0 +1,21 @@
+version: '3.7'
+services:
+    web:
+        image: 'node'
+        container_name: simplytodo-web
+        working_dir: /app
+        volumes:
+            - ./web:/app
+        ports:
+            - '80:3000'
+        stdin_open: true
+        command: /bin/bash -c "yarn && yarn start"
+    backend:
+        image: 'node'
+        container_name: simplytodo-backend
+        working_dir: /app
+        volumes:
+            - './backend:/app'
+        ports:
+            - '3333:3333'
+        command: /bin/bash -c "yarn && yarn typeorm migration:run && NODE_ENV=development yarn dev"

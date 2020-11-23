@@ -11,4 +11,4 @@ app.use(express.json())
 app.use(routes)
 app.use(errorHandler)
 
-app.listen(process.env.PORT || 3333, () => console.log(`Backend is running!`))
+app.listen(process.env.PORT || 3333, () => console.log(`Backend is running on ${process.env.PORT || 3333} with ${process.env.NODE_ENV} env!`))
