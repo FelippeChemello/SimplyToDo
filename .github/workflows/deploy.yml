@@ -21,10 +21,10 @@ jobs:
                       if [ ! -d SimplyToDo/.git ]
                       then 
                         git clone https://github.com/FelippeChemello/SimplyToDo.git;
+                        cd SimplyToDo/
                       else
                         cd SimplyToDo/
                       fi
                       git pull;
-                      cd SimplyToDo;
                       docker-compose down;
                       docker-compose up -d;
