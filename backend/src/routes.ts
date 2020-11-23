@@ -1,4 +1,4 @@
-import { Router } from 'express'
+import { response, Router } from 'express'
 
 import './database/connection'
 
@@ -18,5 +18,9 @@ routes.post('/todo', TodoController.create)
 routes.post('/todo/:id', TodoController.show)
 routes.patch('/todo/:id/isDone', TodoController.isDone)
 routes.post('/todo/:id/delete', TodoController.delete)
+
+routes.get('/', (request, response) => {
+    response.status(200).send(`API is WORKING with ${process.env.NODE_ENV} env`)
+})
 
 export default routes
