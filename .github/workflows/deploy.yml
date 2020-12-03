@@ -1,15 +1,22 @@
 name: Deploy
 
-on:
-    push:
-        branches: [master]
-    pull_request:
-        branches: [master]
+on: push
 
 jobs:
     deploy:
         runs-on: ubuntu-latest
         steps:
+            - name: Checkout last code
+              uses: actions/checkout@v2.3.2
+
+            - name: Clone files to Server
+              uses: SamKirkland/FTP-Deploy-Action@4.0.0
+              with:
+                  server: ${{ secrets.SSH_HOST }}
+                  username: ${{ secrets.SSH_USERNAME }}
+                  password: ${{ secrets.SSH_PASSWORD }}
+                  server-dir: /root/
+
             - name: SSH Remote Commands
               uses: appleboy/ssh-action@v0.1.4
               with:
@@ -18,13 +25,6 @@ jobs:
                   password: ${{ secrets.SSH_PASSWORD }}
                   port: 22
                   script: |
-                      if [ ! -d SimplyToDo/.git ]
-                      then 
-                        git clone https://github.com/FelippeChemello/SimplyToDo.git;
-                        cd SimplyToDo/
-                      else
-                        cd SimplyToDo/
-                      fi
-                      git pull;
+                      cd SimplyToDo
                       docker-compose down;
                       docker-compose up -d;
