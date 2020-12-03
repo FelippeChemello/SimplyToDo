@@ -16,7 +16,7 @@ jobs:
                   username: ${{ secrets.SSH_USERNAME }}
                   password: ${{ secrets.SSH_PASSWORD }}
                   source: '*'
-                  target: '/root'
+                  target: '/root/SimplyToDo'
 
             - name: SSH Remote Commands
               uses: appleboy/ssh-action@v0.1.4
